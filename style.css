@@ -781,6 +781,10 @@ html[dir="rtl"] .feature-list li {
     width: 50px;
     height: 50px;
     font-size: 24px;
+    /* Keep WhatsApp above the mobile call bar */
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 84px);
+    right: 14px;
+    z-index: 1101;
   }
 
   .whatsapp-float::after {
@@ -789,8 +793,27 @@ html[dir="rtl"] .feature-list li {
 
   .go-top-btn {
     right: 14px;
-    bottom: 138px;
+    /* Stack above WhatsApp to avoid overlap on narrow screens */
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 146px);
     width: 48px;
     height: 48px;
+    z-index: 1100;
+  }
+
+  .mobile-call-bar {
+    z-index: 1090;
+    padding-bottom: calc(0.8rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 430px) {
+  .whatsapp-float {
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 88px);
+    right: 12px;
+  }
+
+  .go-top-btn {
+    right: 12px;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 152px);
   }
 }
