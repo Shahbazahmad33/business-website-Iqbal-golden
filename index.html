@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Turn your scrap into cash fast. Get instant scrap quotes, free pickup, and instant payment from a trusted scrap purchasing company."
+  />
+  <title>IQBAL GOLDON TRADING CO. | Scrap Purchasing Company</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a class="logo" href="#top">IQBAL <span>GOLDON</span></a>
+      <ul class="nav-links">
+        <li><a href="#company-info" data-i18n="navCompany">Company</a></li>
+        <li><a href="#quote" data-i18n="navQuote">Quote</a></li>
+        <li><a href="#categories" data-i18n="navCategories">Categories</a></li>
+        <li><a href="#business">Business</a></li>
+        <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-toggle" aria-label="Language toggle">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="ar">AR</button>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-outline" href="tel:+966509816334"><i class="fa-solid fa-phone"></i> +966509816334</a>
+          <a class="btn btn-primary" href="#quote" data-i18n="getQuoteShort"><i class="fa-solid fa-bolt"></i> <span>Get Quote</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero section">
+      <div class="container">
+        <div class="hero-content reveal show">
+          <span class="hero-badge"><i class="fa-solid fa-shield-halved"></i> Trusted Scrap Buyers</span>
+          <h1 data-i18n="heroTitle">Turn Your Scrap Into Cash - Fast &amp; Hassle-Free</h1>
+          <p data-i18n="heroSubtitle">We buy all types of scrap with instant quotes and free pickup.</p>
+          <div class="hero-cta">
+            <a href="#quote" class="btn btn-primary" data-i18n="getInstantQuote"><i class="fa-solid fa-calculator"></i> <span>Get Instant Quote</span></a>
+            <a href="tel:+966509816334" class="btn btn-outline" data-i18n="callNow"><i class="fa-solid fa-phone"></i> <span>Call Now</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company details -->
+    <section class="company-info-wrap" id="company-info">
+      <div class="container">
+        <article class="company-info-card reveal">
+          <h3><strong>IQBAL GOLDON TRADING CO.</strong></h3>
+          <div class="company-info-grid">
+            <div class="company-item">
+              <i class="fa-solid fa-user-tie"></i>
+              <p><strong>CEO:</strong> Yasir Iqbal</p>
+            </div>
+            <div class="company-item">
+              <i class="fa-solid fa-user-gear"></i>
+              <p><strong>COO:</strong> Bilal Hassan</p>
+            </div>
+            <div class="company-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <p><strong>Address:</strong> Jeddah-Al Laith Road Scrap Plan, Saudi Arabia, Yard No.A79</p>
+            </div>
+            <div class="company-item">
+              <i class="fa-solid fa-phone-volume"></i>
+              <p><strong>Phone:</strong> <a href="tel:+966509816334">+966509816334</a></p>
+            </div>
+            <div class="company-item">
+              <i class="fa-solid fa-envelope"></i>
+              <p><strong>Email:</strong> <a href="mailto:iqballgolden@gmail.com">iqballgolden@gmail.com</a></p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Quote calculator -->
+    <section class="quote-wrap" id="quote">
+      <div class="container">
+        <div class="quote-card reveal">
+          <div class="section-title" style="margin-bottom: 1rem;">
+            <h2>Quick Quote Calculator</h2>
+            <p>Get an estimated payout in seconds.</p>
+          </div>
+          <form id="quoteForm" class="quote-grid" aria-label="Quick quote calculator">
+            <div class="quote-field">
+              <label for="scrapType">Select Scrap Type</label>
+              <select id="scrapType" required>
+                <option value="">Choose a type</option>
+                <option value="iron">Iron</option>
+                <option value="copper">Copper</option>
+                <option value="aluminum">Aluminum</option>
+                <option value="ewaste">E-Waste</option>
+              </select>
+            </div>
+            <div class="quote-field">
+              <label for="weight">Weight (kg)</label>
+              <input id="weight" type="number" min="1" step="1" placeholder="Enter weight" required />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-solid fa-coins"></i> Calculate Price
+            </button>
+          </form>
+          <div id="quoteResult" class="quote-result" aria-live="polite">Estimated Price (SAR): 0</div>
+          <p class="quote-note">Final rates may vary based on quality and location.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Company Leadership</h2>
+          <p>Leadership at IQBAL GOLDON TRADING CO.</p>
+        </div>
+        <div class="leadership-grid">
+          <article class="card leader-card reveal">
+            <img class="leader-photo leader-photo-yasir" src="yasir.jpeg" alt="Yasir Iqbal, CEO at IQBAL GOLDON TRADING CO." />
+            <h3>Yasir Iqbal</h3>
+            <p class="leader-role">(CEO)</p>
+            <p class="leader-role-desc">Chief Executive Officer</p>
+            <p class="leader-role-desc"><i class="fa-solid fa-envelope"></i> <a href="mailto:Yssirranjha000@gmail.com">Yssirranjha000@gmail.com</a></p>
+            <p class="leader-role-desc"><i class="fa-solid fa-phone"></i> <a href="tel:+966531471613">0531471613</a></p>
+          </article>
+          <article class="card leader-card reveal">
+            <img class="leader-photo" src="bilal.jpeg" alt="Bilal Hassan, COO at IQBAL GOLDON TRADING CO." />
+            <h3>Bilal Hassan</h3>
+            <p class="leader-role">(COO)</p>
+            <p class="leader-role-desc">Chief Operating Officer</p>
+            <p class="leader-role-desc"><i class="fa-solid fa-envelope"></i> <a href="mailto:Bial2460@icloud.com">Bial2460@icloud.com</a></p>
+            <p class="leader-role-desc"><i class="fa-solid fa-phone"></i> <a href="tel:+966509816334">0509816334</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-i18n="howItWorks">How It Works</h2>
+          <p>Simple 4-step process designed for speed and convenience.</p>
+        </div>
+        <div class="grid-4">
+          <article class="card step-card reveal">
+            <div class="icon-circle"><i class="fa-solid fa-file-circle-plus"></i></div>
+            <h3>Submit Scrap Details</h3>
+            <p>Share material type, weight, and pickup location.</p>
+          </article>
+          <article class="card step-card reveal">
+            <div class="icon-circle"><i class="fa-solid fa-tags"></i></div>
+            <h3>Get Best Price</h3>
+            <p>Receive a transparent market-based quote instantly.</p>
+          </article>
+          <article class="card step-card reveal">
+            <div class="icon-circle"><i class="fa-solid fa-truck-fast"></i></div>
+            <h3>Schedule Pickup</h3>
+            <p>Choose a convenient time for free collection.</p>
+          </article>
+          <article class="card step-card reveal">
+            <div class="icon-circle"><i class="fa-solid fa-wallet"></i></div>
+            <h3>Get Paid Instantly</h3>
+            <p>Get cash or transfer immediately after verification.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scrap categories -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-i18n="scrapCategories">Scrap Categories We Buy</h2>
+          <p>From household metal to industrial bulk scrap, we purchase all major categories.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card category-card reveal">
+            <div class="icon-circle"><i class="fa-solid fa-industry"></i></div>
+            <h3>Iron Scrap</h3>
+            <p>Heavy iron, rods, sheets, and machine leftovers.</p>
+            <a href="#quote" class="btn btn-dark" data-i18n="sellNow">Sell Now</a>
+          </article>
+          <article class="card category-card reveal">
+            <div class="icon-circle"><i class="fa-solid fa-bolt"></i></div>
+            <h3>Copper Scrap</h3>
+            <p>Wires, pipes, and mixed copper from all sources.</p>
+            <a href="#quote" class="btn btn-dark" data-i18n="sellNow">Sell Now</a>
+          </article>
+          <article class="card category-card reveal">
+            <div class="icon-circle"><i class="fa-solid fa-cubes"></i></div>
+            <h3>Aluminum Scrap</h3>
+            <p>Profiles, cans, casted parts, and sheet scrap.</p>
+            <a href="#quote" class="btn btn-dark" data-i18n="sellNow">Sell Now</a>
+          </article>
+          <article class="card category-card reveal">
+            <div class="icon-circle"><i class="fa-solid fa-microchip"></i></div>
+            <h3>E-Waste</h3>
+            <p>Computer parts, cables, telecom, and devices.</p>
+            <a href="#quote" class="btn btn-dark" data-i18n="sellNow">Sell Now</a>
+          </article>
+          <article class="card category-card reveal">
+            <div class="icon-circle"><i class="fa-solid fa-helmet-safety"></i></div>
+            <h3>Construction Scrap</h3>
+            <p>Site leftovers including steel, frames, and pipes.</p>
+            <a href="#quote" class="btn btn-dark" data-i18n="sellNow">Sell Now</a>
+          </article>
+          <article class="card category-card reveal">
+            <div class="icon-circle"><i class="fa-solid fa-gears"></i></div>
+            <h3>Industrial Scrap</h3>
+            <p>Factory offcuts, obsolete machinery, and production scrap.</p>
+            <a href="#quote" class="btn btn-dark" data-i18n="sellNow">Sell Now</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose us -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-i18n="whyChooseUs">Why Choose Us</h2>
+          <p>Reliable service, transparent pricing, and fast payment every time.</p>
+        </div>
+        <ul class="feature-list">
+          <li class="reveal"><i class="fa-solid fa-circle-check"></i> Free Pickup</li>
+          <li class="reveal"><i class="fa-solid fa-circle-check"></i> Instant Payment</li>
+          <li class="reveal"><i class="fa-solid fa-circle-check"></i> Best Market Rates</li>
+          <li class="reveal"><i class="fa-solid fa-circle-check"></i> Trusted Service</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Business section -->
+    <section class="section" id="business">
+      <div class="container">
+        <div class="business-banner reveal">
+          <h3>Bulk Scrap Solutions for Factories &amp; Companies</h3>
+          <p>Dedicated pickups, priority rates, and custom commercial contracts for business clients.</p>
+          <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> Request Contract Pricing</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-i18n="testimonials">Customer Testimonials</h2>
+          <p>Trusted by households, workshops, and businesses.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card testimonial-card reveal">
+            <p>"Fast pickup and very fair rates. Payment was transferred within minutes."</p>
+            <p class="name">Ali Raza</p>
+            <p class="role">Workshop Owner, Jeddah</p>
+          </article>
+          <article class="card testimonial-card reveal">
+            <p>"Professional team with clear communication. Best experience selling industrial scrap."</p>
+            <p class="name">Sana Enterprises</p>
+            <p class="role">Factory Procurement Team</p>
+          </article>
+          <article class="card testimonial-card reveal">
+            <p>"I sold old wiring and metal scrap at a better price than local dealers."</p>
+            <p class="name">Usman Tariq</p>
+            <p class="role">Contractor, Jeddah</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service area -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-i18n="serviceArea">Service Areas</h2>
+          <p>Our yard is on Jeddah-Al Laith Road, and we serve nearby industrial areas with fast pickup.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card service-card reveal">
+            <h3>Active Service Zone</h3>
+            <p>Jeddah-Al Laith Road Scrap Plan, Saudi Arabia, Yard No.A79.</p>
+            <div class="city-tags">
+              <span>Jeddah</span>
+              <span>Al Laith Road</span>
+            </div>
+          </article>
+          <div class="reveal">
+            <iframe
+              title="Service area map"
+              class="map-embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Jeddah-Al%20Laith%20Road%20Scrap%20Plan%20Saudi%20Arabia%20Yard%20No.A79&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            ></iframe>
+            <p style="margin-top: .75rem;">
+              <a href="https://maps.app.goo.gl/M9NA49h36D8uarnP9?g_st=ic" target="_blank" rel="noopener" class="btn btn-outline">
+                <i class="fa-solid fa-map-location-dot"></i> Open Exact Location
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="final-cta reveal">
+          <h2 data-i18n="finalCtaTitle">Ready to Sell Your Scrap?</h2>
+          <p>Get a fast quote now and schedule your free pickup today at iqballgolden@gmail.com.</p>
+          <div class="actions">
+            <a href="#quote" class="btn btn-primary" data-i18n="getQuoteShort"><i class="fa-solid fa-calculator"></i> <span>Get Quote</span></a>
+            <a href="https://wa.me/966509816334" class="btn btn-success" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>IQBAL GOLDON TRADING CO.</h4>
+          <p>Reliable scrap purchasing with transparent rates and instant payments.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+966509816334"><i class="fa-solid fa-phone"></i> +966509816334</a>
+          <a href="mailto:iqballgolden@gmail.com"><i class="fa-solid fa-envelope"></i> iqballgolden@gmail.com</a>
+          <p><i class="fa-solid fa-location-dot"></i> Jeddah-Al Laith Road Scrap Plan, Saudi Arabia, Yard No.A79</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#quote">Quick Quote</a>
+          <a href="#categories">Categories</a>
+          <a href="#business">Business Contracts</a>
+          <a href="#contact">Service Areas</a>
+        </div>
+      </div>
+      <p class="copyright">&copy; <span id="year"></span> IQBAL GOLDON TRADING CO. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/966509816334" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <button type="button" id="goTopBtn" class="go-top-btn" aria-label="Go to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <a class="mobile-call-bar" href="tel:+966509816334"><i class="fa-solid fa-phone"></i> <span data-i18n="callNow">Call Now</span>: +966509816334</a>
+
+  <script>
+    // Sample rates (SAR per kg) used for estimate calculator
+    const rates = {
+      iron: 3,
+      copper: 20,
+      aluminum: 8,
+      ewaste: 5
+    };
+
+    const quoteForm = document.getElementById("quoteForm");
+    const scrapType = document.getElementById("scrapType");
+    const weightInput = document.getElementById("weight");
+    const quoteResult = document.getElementById("quoteResult");
+    const yearEl = document.getElementById("year");
+    const langButtons = document.querySelectorAll(".lang-btn");
+    const goTopBtn = document.getElementById("goTopBtn");
+
+    const translations = {
+      en: {
+        navCompany: "Company",
+        navQuote: "Quote",
+        navCategories: "Categories",
+        navContact: "Contact",
+        heroTitle: "Turn Your Scrap Into Cash - Fast & Hassle-Free",
+        heroSubtitle: "We buy all types of scrap with instant quotes and free pickup.",
+        getInstantQuote: "Get Instant Quote",
+        callNow: "Call Now",
+        sellNow: "Sell Now",
+        howItWorks: "How It Works",
+        scrapCategories: "Scrap Categories",
+        whyChooseUs: "Why Choose Us",
+        testimonials: "Testimonials",
+        serviceArea: "Service Area",
+        finalCtaTitle: "Ready to Sell Your Scrap?",
+        getQuoteShort: "Get Quote"
+      },
+      ar: {
+        navCompany: "الشركة",
+        navQuote: "عرض السعر",
+        navCategories: "الأنواع",
+        navContact: "التواصل",
+        heroTitle: "حوّل خردتك إلى نقود — بسرعة وبدون تعقيد",
+        heroSubtitle: "نشتري جميع أنواع الخردة مع تسعير فوري وخدمة استلام مجانية",
+        getInstantQuote: "احصل على عرض سعر",
+        callNow: "اتصل الآن",
+        sellNow: "بع الآن",
+        howItWorks: "كيف يعمل",
+        scrapCategories: "أنواع الخردة",
+        whyChooseUs: "لماذا نحن",
+        testimonials: "آراء العملاء",
+        serviceArea: "نطاق الخدمة",
+        finalCtaTitle: "هل أنت مستعد لبيع خردتك؟",
+        getQuoteShort: "احصل على عرض سعر"
+      }
+    };
+
+    function setLanguage(lang) {
+      const selectedLang = translations[lang] ? lang : "en";
+      const htmlEl = document.documentElement;
+      htmlEl.setAttribute("lang", selectedLang);
+      htmlEl.setAttribute("dir", selectedLang === "ar" ? "rtl" : "ltr");
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        const value = translations[selectedLang][key];
+        if (!value) {
+          return;
+        }
+
+        const target = element.querySelector("span");
+        if (target) {
+          target.textContent = value;
+        } else {
+          element.textContent = value;
+        }
+      });
+
+      langButtons.forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.lang === selectedLang);
+      });
+
+      localStorage.setItem("siteLanguage", selectedLang);
+    }
+
+    langButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        setLanguage(btn.dataset.lang);
+      });
+    });
+
+    quoteForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const selectedType = scrapType.value;
+      const weight = Number(weightInput.value);
+
+      if (!selectedType || !weight || weight <= 0) {
+        quoteResult.textContent = document.documentElement.dir === "rtl"
+          ? "يرجى اختيار نوع الخردة وإدخال وزن صحيح."
+          : "Please select scrap type and enter a valid weight.";
+        return;
+      }
+
+      const estimate = rates[selectedType] * weight;
+      const formatted = new Intl.NumberFormat("en-SA").format(estimate);
+      quoteResult.textContent = document.documentElement.dir === "rtl"
+        ? "السعر التقديري (SAR): " + formatted
+        : "Estimated Price (SAR): " + formatted;
+    });
+
+    // Intersection Observer for subtle reveal-on-scroll animation
+    const revealItems = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.16 }
+    );
+
+    revealItems.forEach((item) => {
+      if (!item.classList.contains("show")) {
+        observer.observe(item);
+      }
+    });
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 280) {
+        goTopBtn.classList.add("show");
+      } else {
+        goTopBtn.classList.remove("show");
+      }
+    });
+
+    goTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    yearEl.textContent = new Date().getFullYear();
+    setLanguage(localStorage.getItem("siteLanguage") || "en");
+  </script>
+</body>
+</html>
