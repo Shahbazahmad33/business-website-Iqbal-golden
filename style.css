@@ -460,6 +460,38 @@ a {
   margin-bottom: 0.9rem;
 }
 
+.service-area-grid {
+  align-items: stretch;
+}
+
+.service-area-grid > * {
+  height: 100%;
+}
+
+.service-map-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-map-card .map-embed {
+  flex: 1;
+  min-height: 260px;
+}
+
+.service-map-action {
+  margin-top: 0.75rem;
+}
+
+.btn-outline-dark {
+  border-color: rgba(31, 41, 55, 0.35);
+  color: var(--primary);
+  background: var(--white);
+}
+
+.btn-outline-dark:hover {
+  background: #f3f4f6;
+}
+
 .leadership-grid {
   display: grid;
   gap: 1rem;
@@ -479,6 +511,16 @@ a {
 
 .leader-photo-yasir {
   object-position: center top;
+}
+
+.administration-section {
+  padding-top: 0;
+}
+
+.leader-photo-admin {
+  object-fit: contain;
+  object-position: center;
+  background: #f3f4f6;
 }
 
 .leader-card h3 {
