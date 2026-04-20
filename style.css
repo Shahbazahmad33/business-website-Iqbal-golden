@@ -246,7 +246,10 @@ a {
 
 /* Company info */
 .company-info-wrap {
-  margin: 0 0 40px;
+  position: static;
+  margin: clamp(1rem, 2.5vw, 2rem) 0 40px;
+  padding-top: 0;
+  z-index: auto;
 }
 
 .company-info-card {
